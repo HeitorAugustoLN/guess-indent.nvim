@@ -31,7 +31,7 @@ local function setup_autocommands()
   local augroup = vim.api.nvim_create_augroup("GuessIndent", { clear = true })
   vim.api.nvim_create_autocmd("BufReadPost", {
     group = augroup,
-    desc = "Guesss indentation when loading a file",
+    desc = "Guess indentation when loading a file",
     callback = function(args)
       M.set_from_buffer(args.buf, true, true)
     end,
